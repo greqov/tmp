@@ -5,9 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dep": "gh-pages -d 'dist' --message 'Deploy commit'",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
-    "deploy-demo": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages",
+    "deploy": "webpack && gh-pages -d 'dist' --message 'Deploy commit'",
     "start": "webpack serve --open",
     "build": "webpack"
   },
